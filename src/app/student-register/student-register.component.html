@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()">
+  name : <input type="text" name="name" [(ngModel)]="studentDto.name"><br>
+  age : <input type="text" name="age" [(ngModel)]="studentDto.age"><br>
+  자기소개 : <input type="text" name="intro" [(ngModel)]="studentDto.intro"><br>
+  <button type="submit">등록하기</button>
+</form>

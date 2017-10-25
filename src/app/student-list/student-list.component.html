@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+	<h1>{{title}}</h1>
+	<table border="1">
+		<tr align="center">
+			<td width="100px">id</td>
+			<td width="100px">이름</td>
+			<td width="100px">나이</td>
+			<td width="100px">등록일</td>
+		</tr>
+
+		<tr *ngFor="let m of studentList" (click)="sendStudentInfo(m.id)">
+			<td>{{m.id}}</td>
+			<td>{{m.name}}</td>
+			<td>{{m.age}}</td>
+			<td>{{m.created}}</td>
+		</tr>
+	</table>
+
+	<button>
+		<a routerLink='/studentRegister'>등록하기</a>
+	</button>
+</body>
