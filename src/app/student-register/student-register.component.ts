@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpService } from '../shared/http.service';
 import { Location } from '@angular/common';
 
+import { Student } from '../model/student.model';
 @Component( {
     selector: 'app-student-register',
     templateUrl: './student-register.component.html',
@@ -9,15 +10,11 @@ import { Location } from '@angular/common';
 } )
 export class StudentRegisterComponent implements OnInit {
 
-    studentDto: any;
+    studentDto: Student;
 
     constructor( private httpService: HttpService,
         private _location: Location ) {
-        this.studentDto = {
-            name: '',
-            age: '',
-            intro: ''
-        };
+        this.studentDto = new Student();
     }
 
     ngOnInit() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../shared/http.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Student } from '../model/student.model';
 @Component( {
     selector: 'app-student-list',
     templateUrl: './student-list.component.html',
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 } )
 export class StudentListComponent implements OnInit {
     title = 'Student List Board';
-    studentList: any;
+    studentList: Student[];
 
     ngOnInit(): void {
         // throw new Error('Method not implemented.');
@@ -23,7 +24,9 @@ export class StudentListComponent implements OnInit {
     }
 
     showStudentList() {
-        this.httpService.sendGet( '/api/studentList.json' ).subscribe( res => { this.studentList = res; } );
+       this.httpService.sendGet( '/api/studentList.json' ).subscribe(
+          (studentList: Array<Student>) => { this.studentList = studentList; }
+       );
     }
 
     sendStudentInfo( id ) {

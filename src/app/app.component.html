@@ -1,1 +1,24 @@
-<router-outlet></router-outlet>
+<div class="mdl-layout mdl-js-layout">
+            
+<!-- header content -->            
+<app-header></app-header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  
+<!-- main content -->
+ <main class="mdl-layout__content">
+	<router-outlet class="mdl-grid"></router-outlet>		
+  </main>
+</div>
+
+
+<!-- footer content -->
+<app-footer></app-footer>
