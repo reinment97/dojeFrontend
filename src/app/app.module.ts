@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { BoardModule } from './board/board.module';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -14,12 +15,15 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentRegisterComponent } from './student-register/student-register.component';
 
 
+
+
 @NgModule( {
     declarations: [
         AppComponent,
         StudentComponent,
         StudentListComponent,
-        StudentRegisterComponent
+        StudentRegisterComponent,
+
     ],
     imports: [
         BrowserModule,
@@ -27,7 +31,8 @@ import { StudentRegisterComponent } from './student-register/student-register.co
         RouterModule.forRoot( routes ),
         CommonModule,
         FormsModule,
-        CoreModule
+        CoreModule,
+        BoardModule
     ],
     providers: [HttpService],
     bootstrap: [AppComponent]
