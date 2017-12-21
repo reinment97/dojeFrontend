@@ -7,30 +7,30 @@
 
 #### Shcema
 > id: INT <br>
-> title: String
-> content: String
-> writer: INT
-> created: TIMESTAMP
+> title: String <br>
+> content: String <br>
+> writer: INT <br>
+> created: TIMESTAMP <br>
 > updated: TIMESTAMP
 
 
 ### COMMENT
 
 #### Schema
-> id: INT 
-> content: String
-> writer: String
-> created: TIMESTAMP
-> Board_id: INT
+> id: INT <br>
+> content: String <br>
+> writer: String <br>
+> created: TIMESTAMP <br>
+> Board_id: INT <br>
 
 ### USER 
 
 #### Schema
-> id: INT
-> useremail:  String
-> userpassword: String
-> created: TIMESTAMP
-> user_key: String
+> id: INT <br>
+> useremail:  String <br>
+> userpassword: String <br>
+> created: TIMESTAMP <br>
+> user_key: String <br>
 
 
 * /user/login : POST
