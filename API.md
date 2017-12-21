@@ -14,6 +14,26 @@
 > updated: TIMESTAMP
 
 
+##### 게시글 리스트
+* /board : GET
+
+> Requiring
+   
+
+> Return
+
+	{
+		CODE:MESSAGE,
+		"id": INT
+		"title": (Board's title)
+		"content": (Board's content)
+		"writer_name": (User's name)
+		"date": (Board's created or updated)
+	}
+
+
+
+
 ### COMMENT
 
 #### Schema
