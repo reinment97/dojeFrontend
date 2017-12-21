@@ -107,8 +107,8 @@
 > seq: INT <br>
 > Board_id: INT <br>
 
-##### 게시글 가져오기
-* /board/{BOARD_ID} : GET
+##### 댓글 리스트
+* /comment/{BOARD_ID} : GET
 
 > Requiring
 	
@@ -117,12 +117,36 @@
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
 		"id": INT
-		"title": Sring (Board's title)
-		"content": String (Board's content)
+		"content": String (Comment's content)
 		"writer_name": String (User's name)
 		"date": TIMESTAMP(Board's created or updated)
 	}
 
+##### 댓글 작성
+* /comment/{BOARD_ID} : POST
+
+
+> Requiring
+
+	content: String (Comment's content)
+	writer: INT (User's id)
+
+> Return
+	{
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+	}
+
+##### 댓글 삭제
+* /comment/{BOARD_ID} : GET
+
+> Requiring
+	
+> Return
+	{
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+	}
 
 ### USER 
 
@@ -134,47 +158,49 @@
 > created: TIMESTAMP <br>
 > user_key: String <br>
 
-
-* /user/login : POST
+##### 유저 확인
+* /user : GET
 
 > Requiring
 
-    useremail : String (User's email)
-    userpw : String (User's password)
-    
-> Return
+	useremail: String (User's email)
+	userpassword: String (User's password)
 
+> Return
 	{
-		CODE:MESSAGE,
-		SUCCESS: BOOLEAN,
-		"KEY": USERKEY
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+		"user_key":STRING
 	}
 
-* /user/join : POST
+##### 유저 가입
+* /user : POST
 
 > Requiring
 
-    useremail : String (User's email)
-    userpw : String (User's password)
-    
-> Return
+	useremail: String (User's email)
+	username: String (User's name)
+	userpassword: String (User's password)
 
+> Return
 	{
-		CODE:MESSAGE,
-		SUCCESS: BOOLEAN
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
 	}
 
-* /user/{id} : POST
+
+##### 유저 정보
+* /user/{USER_ID} : POST
 
 > Requiring
 
-    key : String (User's key)
-    
-    
-> Return
+	user_key: String (User's KEY)
+	
 
+> Return
 	{
-		CODE:MESSAGE,
-		SUCCESS: BOOLEAN,
-		"useremail": STRING,
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+		"useremail": String (User's email)
+		"username": String (User's name)
 	}
