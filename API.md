@@ -72,6 +72,7 @@
 > Requiring
 
 > Return
+
 	{
 		CODE:MESSAGE,
 		SUCCESS:BOOLEAN
@@ -84,6 +85,7 @@
 > Requiring
 	
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -174,7 +176,8 @@
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
-		"user_key":STRING
+		"user_key": STRING (User's key)
+		"id": INT (User's id)
 	}
 
 ##### 유저 가입
