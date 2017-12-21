@@ -24,14 +24,68 @@
 
 	{
 		CODE:MESSAGE,
+		SUCCESS:BOOLEAN
 		"id": INT
-		"title": (Board's title)
-		"content": (Board's content)
-		"writer_name": (User's name)
-		"date": (Board's created or updated)
+		"title": Sring (Board's title)
+		"content": String (Board's content)
+		"writer_name": String (User's name)
+		"date": TIMESTAMP(Board's created or updated)
 	}
 
+* /board : POST
 
+> Requiring
+   
+	title: String (Board's title)
+	content: String (Board's content)
+	writer: INT (User's id)
+
+> Return
+
+	{
+		CODE:MESSAGE,
+		SUCCESS:BOOLEAN
+	}
+
+* /board : PUT
+
+> Requiring
+   
+	id: INT (Board's id)
+	title: String (Board's title)
+	content: String (Board's content)
+
+> Return
+
+	{
+		CODE:MESSAGE,
+		SUCCESS:BOOLEAN
+	}
+
+* /board/{BOARD_ID} : DELETE
+
+> Requiring
+
+> Return
+	{
+		CODE:MESSAGE,
+		SUCCESS:BOOLEAN
+	}
+
+* /board/{BOARD_ID} : GET
+
+> Requiring
+	
+> Return
+	{
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+		"id": INT
+		"title": Sring (Board's title)
+		"content": String (Board's content)
+		"writer_name": String (User's name)
+		"date": TIMESTAMP(Board's created or updated)
+	}
 
 
 ### COMMENT
@@ -49,6 +103,7 @@
 > id: INT <br>
 > useremail:  String <br>
 > userpassword: String <br>
+> username: String <br>
 > created: TIMESTAMP <br>
 > user_key: String <br>
 
