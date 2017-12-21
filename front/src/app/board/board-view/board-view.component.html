@@ -1,0 +1,23 @@
+<div class="in">
+  <h1>보드 뷰</h1>
+  <div>
+    <b>아이디: {{BoardData?.id}}</b><br>
+    <b>타이틀: {{BoardData?.title}}</b><br>
+    <b>컨텐트: {{BoardData?.content}}</b><br>
+    <b>데이트: {{BoardData?.date | date:'yyyy-MM-dd'}}</b><br>
+    <b>유저: {{BoardData?.writer_id}}</b>
+    <br><br>
+    <button>수정</button>
+    <button (click)="onDelete(BoardData?.id)">삭제</button>
+    <hr>
+    <h1>댓글</h1>
+    <br>
+    <b *ngFor="let data of CommentList">
+      {{ data?.writer_name}}: {{ data?.content }}<br>
+    </b>
+    <!--<form (ngSubmit)="onCommentSubmit">-->
+      <!--<input type="text" [(ngModel)]="comment.content">-->
+      <!--<button>submit</button>-->
+    <!--</form>-->
+  </div>
+</div>

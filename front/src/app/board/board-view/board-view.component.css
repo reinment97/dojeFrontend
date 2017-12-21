@@ -1,0 +1,13 @@
+h1 + div{
+  margin-top: 10px;
+}
+
+hr{
+  margin:10px 0;
+  background: #eee;
+}
+
+button{
+  width: 100px;
+  height:40px;
+}

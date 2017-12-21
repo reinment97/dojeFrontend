@@ -1,0 +1,10 @@
+<div class="in">
+  <h1>보드 라이트</h1>
+
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="타이틀" name="title" [(ngModel)]="board.title" >
+    <textarea name="content" placeholder="콘텐트" cols="30" rows="10" [(ngModel)]="board.content"></textarea>
+    <!--<input type="text" placeholder="작성자" name="user_nickname" [(ngModel)]="board.user_nickname">-->
+    <button>작성하기</button>
+  </form>
+</div>
