@@ -6,7 +6,7 @@
 ### BOARD
 
 #### Shcema
-> id: INT
+> id: INT \n
 > title: String
 > content: String
 > writer: INT
@@ -17,7 +17,7 @@
 ### COMMENT
 
 #### Schema
-> id: INT
+> id: INT 
 > content: String
 > writer: String
 > created: TIMESTAMP
