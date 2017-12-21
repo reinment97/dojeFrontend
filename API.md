@@ -133,6 +133,9 @@
 
 	content: String (Comment's content)
 	writer: INT (User's id)
+	level: INT (Comment's level)
+	group: INT (Comment's group)
+	seq: INT (Comment's seq)
 
 > Return
 
