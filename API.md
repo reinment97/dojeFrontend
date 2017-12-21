@@ -6,7 +6,7 @@
 ### BOARD
 
 #### Shcema
-> id: INT \n
+> id: INT <br>
 > title: String
 > content: String
 > writer: INT
