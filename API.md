@@ -3,9 +3,35 @@
 
 ## API Docs 
 
+### BOARD
+
+#### Shcema
+> id: INT
+> title: String
+> content: String
+> writer: INT
+> created: TIMESTAMP
+> updated: TIMESTAMP
 
 
-### USER
+### COMMENT
+
+#### Schema
+> id: INT
+> content: String
+> writer: String
+> created: TIMESTAMP
+> Board_id: INT
+
+### USER 
+
+#### Schema
+> id: INT
+> useremail:  String
+> userpassword: String
+> created: TIMESTAMP
+> user_key: String
+
 
 * /user/login : POST
 
