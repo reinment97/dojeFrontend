@@ -113,6 +113,7 @@
 > Requiring
 	
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -132,6 +133,7 @@
 	writer: INT (User's id)
 
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -143,6 +145,7 @@
 > Requiring
 	
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -167,6 +170,7 @@
 	userpassword: String (User's password)
 
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -183,6 +187,7 @@
 	userpassword: String (User's password)
 
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
@@ -198,6 +203,7 @@
 	
 
 > Return
+
 	{
 		CODE:MESSAGE
 		SUCCESS:BOOLEAN
