@@ -102,7 +102,27 @@
 > content: String <br>
 > writer: String <br>
 > created: TIMESTAMP <br>
+> level: INT <br>
+> group: INT <br>
+> seq: INT <br>
 > Board_id: INT <br>
+
+##### 게시글 가져오기
+* /board/{BOARD_ID} : GET
+
+> Requiring
+	
+> Return
+	{
+		CODE:MESSAGE
+		SUCCESS:BOOLEAN
+		"id": INT
+		"title": Sring (Board's title)
+		"content": String (Board's content)
+		"writer_name": String (User's name)
+		"date": TIMESTAMP(Board's created or updated)
+	}
+
 
 ### USER 
 
