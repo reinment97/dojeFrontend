@@ -144,7 +144,7 @@
 	}
 
 ##### 댓글 삭제
-* /comment/{BOARD_ID} : GET
+* /comment/{COMMNET_ID} : DELETE
 
 > Requiring
 	
