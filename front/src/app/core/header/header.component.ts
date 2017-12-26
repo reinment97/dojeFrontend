@@ -9,7 +9,8 @@ import {Router} from "@angular/router";
 export class HeaderComponent implements OnInit {
   User_Active: boolean;
   constructor(private router: Router) {
-    if ( sessionStorage.getItem('loginData') !== 'null') {
+    console.log(sessionStorage.getItem('loginData'));
+    if ( sessionStorage.getItem('loginData') !== null) {
       this.User_Active = true;
     } else {
       this.User_Active = false;
@@ -36,7 +37,7 @@ export class HeaderComponent implements OnInit {
   }
 
   goLogout() {
-    localStorage.removeItem('loginData');
+    sessionStorage.removeItem('loginData');
     location.href = '/';
   }
 }

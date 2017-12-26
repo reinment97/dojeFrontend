@@ -4,9 +4,9 @@ export class Comment {
   writer: String;
   created: Date;
   level: number;
-  group: number;
+  gr: number;
   seq: number;
-  Board_id: number;
+  board_id: number;
   writer_name: String;
   date: Date;
 }

@@ -11,3 +11,8 @@ button{
   width: 100px;
   height:40px;
 }
+
+a{
+  color : #005999;
+  font-size: 13px;
+}

@@ -5,19 +5,24 @@
     <b>타이틀: {{BoardData?.title}}</b><br>
     <b>컨텐트: {{BoardData?.content}}</b><br>
     <b>데이트: {{BoardData?.date | date:'yyyy-MM-dd'}}</b><br>
-    <b>유저: {{BoardData?.writer_id}}</b>
+    <b>유저: {{BoardData?.writer_name}}</b>
     <br><br>
-    <button>수정</button>
+    <button (click)="onModify(BoardData?.id)">수정</button>
     <button (click)="onDelete(BoardData?.id)">삭제</button>
     <hr>
     <h1>댓글</h1>
     <br>
-    <b *ngFor="let data of CommentList">
-      {{ data?.writer_name}}: {{ data?.content }}<br>
-    </b>
-    <!--<form (ngSubmit)="onCommentSubmit">-->
-      <!--<input type="text" [(ngModel)]="comment.content">-->
-      <!--<button>submit</button>-->
-    <!--</form>-->
+    <span *ngFor="let data of CommentList" [style.margin-left.em]="data?.level">
+       {{ data?.writer_name}} : {{ data?.content }}
+       <a [style.color]="005999" (click)="onCommentChange(data.level , data.gr , data.seq , data.content)">댓글달기</a>
+      <br>
+    </span>
+    <br>
+    <br>
+    <form (ngSubmit)="onCommentSubmit()">
+      <p>{{parentComment}}에 댓글달기</p>
+      <input type="text" name="cotent" [(ngModel)]="comment.content">
+      <button>submit</button>
+    </form>
   </div>
 </div>

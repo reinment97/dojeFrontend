@@ -4,11 +4,11 @@
       <a (click)="goHome()">도제학교</a>
     </div>
     <div id="menu">
-        <div *ngIf="!User_Active">
+        <div *ngIf="User_Active">
           <a (click)="goWrite()">글쓰기</a>
           <a (click)="goLogout()">로그아웃</a>
         </div>
-      <div *ngIf="User_Active">
+      <div *ngIf="!User_Active">
         <a (click)="goJoin()">회원가입</a>
         <a (click)="goLogin()">로그인</a>
 

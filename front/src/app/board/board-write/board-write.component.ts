@@ -19,7 +19,7 @@ export class BoardWriteComponent implements OnInit {
               ) {
     this.board = new Board();
     // user id setting
-    this.board.writer = JSON.parse( localStorage.getItem('loginData') ).id;
+    this.board.writer = JSON.parse( sessionStorage.getItem('loginData') ).id;
   }
 
   ngOnInit() {

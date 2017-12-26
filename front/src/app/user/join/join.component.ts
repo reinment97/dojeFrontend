@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from "@angular/common";
-import {HttpService} from "../../core/http/http.service";
-import {User} from "../user.model";
+import {Location} from '@angular/common';
+import {HttpService} from '../../core/http/http.service';
+import {User} from '../user.model';
 
 @Component({
   selector: 'app-join',

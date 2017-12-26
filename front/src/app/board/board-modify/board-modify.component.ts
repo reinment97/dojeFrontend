@@ -24,7 +24,7 @@ export class BoardModifyComponent implements OnInit {
   showBoardData(id) {
     this.httpService.sendGet('/board/' + id).subscribe(
       (boardData: Board) => {
-        this.boardData = boardData[0];
+        this.boardData = boardData;
       }
     );
   }

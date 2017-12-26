@@ -3,7 +3,7 @@
 
   <form (ngSubmit)="onSubmit()">
     <input type="text" placeholder="타이틀" name="title" [(ngModel)]="boardData.title" >
-    <textarea name="title" placeholder="콘텐트" cols="30" rows="10" [(ngModel)]="boardData.title"></textarea>
+    <textarea name="content" placeholder="콘텐트" cols="30" rows="10" [(ngModel)]="boardData.content"></textarea>
     <!--<input type="text" placeholder="작성자" name="user_nickname" [(ngModel)]="board.user_nickname">-->
     <button>작성하기</button>
   </form>

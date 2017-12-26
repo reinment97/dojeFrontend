@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
         location.href = '/';
       }, error => {
         // alert( error.message );
-        alert( '알수 없는 오류가 발생하였습니다.' );
-        this._location.back();
+        alert( '아이디와 비밀번호를 다시 확인해주세요' );
+        // this._location.back();
       } );
   }
 }
